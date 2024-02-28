@@ -57,10 +57,12 @@ public class C04DropdownExercise {
         select.selectByValue("saab");
         assertEquals(2,select.getAllSelectedOptions().size());
 
-        //Deselect all the options.
+        //use to delet by value only
         select.deselectByValue("saab");
         // System.out.println(select.getAllSelectedOptions().get(0).getText());
         //  System.out.println(select.getAllSelectedOptions().get(0).getAttribute("value"));
-        select.deselectAll();
+
+
+        select.deselectAll();//use to delet all the selected options
     }
 }
