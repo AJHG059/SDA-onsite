@@ -26,7 +26,7 @@ public class C02JunitAnnotations {
 
      */
 
-    WebDriver driver; // we nede to use this her out side to usedit every time
+    WebDriver driver; // we nede to use this her out side to use it every time
 
     @Before
     public void beforeEachTest() {

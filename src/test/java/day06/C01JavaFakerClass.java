@@ -9,7 +9,7 @@ public class C01JavaFakerClass {
     @Test
     public void testFaker() {
 
-        //this cruting random/Fake name/any string
+        //this cruting random/Fake name/any any thing
         Faker faker = new Faker();
         String fullname1 = faker.name().fullName();
         String fullname2 = faker.name().fullName();

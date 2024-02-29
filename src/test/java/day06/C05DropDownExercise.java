@@ -28,6 +28,7 @@ public class C05DropDownExercise {
 
     @BeforeClass
     public static void setUp() {
+
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
@@ -50,7 +51,7 @@ public class C05DropDownExercise {
         //Options size
         int sizeOoption = options.size();
 
-        //Print all test (using (for eceh lop)when you try to print all the list)
+        //Print all test (use (for eceh lop)when you try to print all the list)
         for (WebElement option : options) {
 
             System.out.println(option.getText());

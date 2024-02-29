@@ -22,6 +22,7 @@ public class C03CheckboxExercise {
 
     @BeforeClass
     public static void setUp() {
+
         ChromeOptions option = new ChromeOptions();
         option.addArguments("disable-popup-blocking");
         driver = new ChromeDriver(option);
@@ -49,12 +50,14 @@ public class C03CheckboxExercise {
         // Verify Home checkbox is selected.
         WebElement checkBox = driver.findElement(By.xpath("//*[@class='rct-icon rct-icon-uncheck']"));
         boolean isSelected = checkBox.isSelected();
+
         if (isSelected) {
             System.out.println("Selected...");
         } else {
             checkBox.click();
             System.out.println("Not selected...");
         }
+
         // Select Home checkbox if it is not selected.
         // Verify that "You have selected" is visible.
         WebElement message = driver.findElement(By.cssSelector("div#result span"));

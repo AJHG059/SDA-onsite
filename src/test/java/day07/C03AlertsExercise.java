@@ -15,17 +15,18 @@ Go to URL: http://demo.automationtesting.in/Alerts.html
 Click "Alert with OK" and click 'click the button to display an alert box:'
 Accept Alert(I am an alert box!) and print alert on console.
 Click "Alert with OK & Cancel" and click 'click the button to display a confirm box'
-Cancel Alert  (Press a Button !)
+    Cancel Alert  (Press a Button !)
 Click "Alert with Textbox" and click 'click the button to demonstrate the prompt box'
 And then sendKeys «Bootcamp» (Please enter your name)
 Finally print on console this message "Hello Bootcamp How are you today" assertion these message.
- */
+*/
 public class C03AlertsExercise {
 
     static WebDriver driver;
 
     @BeforeClass
     public static void setup() {
+
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -48,6 +49,7 @@ public class C03AlertsExercise {
         Thread.sleep(1000);
         driver.findElement(By.partialLinkText("& Cancel")).click();
         Thread.sleep(1000);
+
         driver.findElement(By.xpath("//*[@class='btn btn-primary']")).click();
         Thread.sleep(1000);
 
@@ -63,13 +65,15 @@ public class C03AlertsExercise {
 
         // And then sendKeys «Bootcamp» (Please enter your name)
         Thread.sleep(2000);
+
         driver.switchTo().alert().sendKeys("Abdulaziz");
         Thread.sleep(2000);
 
         driver.switchTo().alert().accept();
 
         // Finally print on console this message "Hello Bootcamp How are you today" assertion these message.
-        Assert.assertTrue(driver.findElement(By.id("demo1")).getText().equals("Hello Abdulaziz How are you today"));
+        Assert.assertTrue(driver.findElement(By.id("demo1"))
+                .getText().equals("Hello Abdulaziz How are you today"));
     }
 
 }

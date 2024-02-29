@@ -31,6 +31,7 @@ public class C04DropdownExercise {
 
     @BeforeClass
     public static void setUp() {
+
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();

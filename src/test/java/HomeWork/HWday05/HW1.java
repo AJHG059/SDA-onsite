@@ -1,4 +1,4 @@
-package HWday05;
+package HomeWork.HWday05;
 
 import org.junit.Assert;
 import org.junit.Test;

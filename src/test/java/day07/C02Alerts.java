@@ -24,6 +24,8 @@ Alerts: There are two types of alerts on websites.
           getText -> Retrieves the alert message
           SendKeys -> Enters a message into the alert input field
  */
+
+
     /*
     Go to URL: http://demo.guru99.com/test/delete_customer.php
     Delete customer ID: 123
@@ -34,6 +36,7 @@ Alerts: There are two types of alerts on websites.
 
     @BeforeClass
     public static void setup() {
+
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -42,8 +45,10 @@ Alerts: There are two types of alerts on websites.
 
     @Test
     public void test() throws InterruptedException {
+
         //Delete customer ID: 123
         driver.findElement(By.name("cusid")).sendKeys("123" + Keys.ENTER);
+
         //Print the alert text.
         Alert alert = driver.switchTo().alert();
         String alertMessage = alert.getText();

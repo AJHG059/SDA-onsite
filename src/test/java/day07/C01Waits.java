@@ -27,6 +27,7 @@ public class C01Waits {
 
     @BeforeClass
     public static void setup() {
+
         driver = new ChromeDriver();
         driver.manage().window().maximize();
     }
@@ -63,7 +64,6 @@ public class C01Waits {
         driver.get("https://seleniumatfingertips.wordpress.com/");
 
     }
-
     @Test
     public void implicitWait() {
     /* Implicit wait:
@@ -88,13 +88,16 @@ public class C01Waits {
     // 2- Provide the desired condition in the until method of the wait object
      */
         driver.get("https://webdriveruniversity.com/Ajax-Loader/index.html");
+
         WebElement button = driver.findElement(By.id("button1"));
         // At this point, our code is in the process of loading the element,
         // it can be located but may not be clickable; in this case, ElementNotClickable error is thrown.
         // We provide the desired condition in the wait object's until method.
+
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOf(button));
         button.click();
+
         // only time is defined, not active yet
         // It does not have to wait for 15 seconds; it continues as soon as the element is clickable.
 
