@@ -42,7 +42,7 @@ public class C02DropDown01 {
     static WebDriver driver;
 
     @BeforeClass
-    public static void sutp(){
+    public static void sutp() {
 
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -51,16 +51,16 @@ public class C02DropDown01 {
     }
 
     @AfterClass
-    public static void Exit(){
+    public static void Exit() {
 
 //        driver.quit();
     }
 
     @Test
-    public void drobDownTest(){
+    public void drobDownTest() {
 
         // first stap locate the element //and you need to crate object so you can call it
-       WebElement elment = driver.findElement(By.xpath("//*[text()='Select Option']"));
+        WebElement elment = driver.findElement(By.xpath("//*[text()='Select Option']"));
 
         // create select object
         Select select = new Select(elment);

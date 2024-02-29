@@ -1,4 +1,5 @@
 package day06;
+
 import org.junit.AfterClass;
 import org.junit.Assert;
 import org.junit.BeforeClass;
@@ -24,41 +25,44 @@ public class C05DropDownExercise {
     Select option "Yellow"
      */
     static WebDriver driver;
+
     @BeforeClass
-    public static void setUp(){
+    public static void setUp() {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.get("https://demoqa.com/select-menu");
     }
+
     @AfterClass
-    public static void tearDown (){
+    public static void tearDown() {
         //driver.quit();
     }
+
     @Test
-    public void test(){
+    public void test() {
 
         //Get all the options of the dropdown
         WebElement element = driver.findElement(By.id("oldSelectMenu"));
         Select select = new Select(element);
-       List <WebElement> options = select.getOptions();
+        List<WebElement> options = select.getOptions();
 
         //Options size
-       int sizeOoption = options.size();
+        int sizeOoption = options.size();
 
         //Print all test (using (for eceh lop)when you try to print all the list)
-        for (WebElement option : options){
+        for (WebElement option : options) {
 
             System.out.println(option.getText());
         }
 
         //Verify the dropdown has option "Black"
         List<String> colorslist = new ArrayList<>();
-        for (WebElement option: options){
+        for (WebElement option : options) {
 
             colorslist.add(option.getText());
         }
-    Assert.assertTrue(colorslist.contains("Black"));
+        Assert.assertTrue(colorslist.contains("Black"));
 //--------------------------------------------------
 //anther way to Verify the dropdown has option "Black"
 //        boolean isBlackOptionPresent = false;
@@ -78,8 +82,6 @@ public class C05DropDownExercise {
 
         //Select option "Yellow"
         select.selectByVisibleText("Yellow");
-
-
 
 
     }

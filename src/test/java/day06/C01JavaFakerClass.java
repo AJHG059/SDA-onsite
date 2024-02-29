@@ -7,19 +7,19 @@ public class C01JavaFakerClass {
 
 
     @Test
-    public void testFaker(){
+    public void testFaker() {
 
         //this cruting random/Fake name/any string
-    Faker faker  = new Faker();
-    String fullname1 = faker.name().fullName();
-    String fullname2 = faker.name().fullName();
+        Faker faker = new Faker();
+        String fullname1 = faker.name().fullName();
+        String fullname2 = faker.name().fullName();
 
         System.out.println("fullname1 = " + fullname1);
         System.out.println("fullname2 = " + fullname2);
 
 
         //random number you can use limt number by use number between
-        System.out.println("faker.number() = " + faker.number().numberBetween(100,999));
+        System.out.println("faker.number() = " + faker.number().numberBetween(100, 999));
 
         //you can print to value or mort but you mast save it in object to store
         System.out.println(fullname1 + " + " + fullname2);

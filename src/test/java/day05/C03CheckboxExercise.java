@@ -19,9 +19,10 @@ public class C03CheckboxExercise {
 
      */
     static WebDriver driver;
+
     @BeforeClass
-    public static void setUp(){
-        ChromeOptions option =new ChromeOptions();
+    public static void setUp() {
+        ChromeOptions option = new ChromeOptions();
         option.addArguments("disable-popup-blocking");
         driver = new ChromeDriver(option);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -29,13 +30,13 @@ public class C03CheckboxExercise {
     }
 
     @AfterClass
-    public static void tearDown(){
+    public static void tearDown() {
         // driver.quit();
     }
 
 
     @Test
-    public void test(){
+    public void test() {
         // Go to URL: https://demoqa.com/
         driver.get("https://demoqa.com/");
 
@@ -48,7 +49,7 @@ public class C03CheckboxExercise {
         // Verify Home checkbox is selected.
         WebElement checkBox = driver.findElement(By.xpath("//*[@class='rct-icon rct-icon-uncheck']"));
         boolean isSelected = checkBox.isSelected();
-        if(isSelected){
+        if (isSelected) {
             System.out.println("Selected...");
         } else {
             checkBox.click();

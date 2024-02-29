@@ -23,21 +23,21 @@ public class TC3 {
 //    Close all pages.
 
 
-   static WebDriver driver;
+    static WebDriver driver;
 
     @BeforeClass
-    public static void sutp(){
+    public static void sutp() {
 
         driver = new ChromeDriver();
         driver.manage().window().maximize();
 
         driver.get("https://id.heroku.com/login");
 
-            driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(16));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(16));
     }
 
     @AfterClass
-    public static void Exit(){
+    public static void Exit() {
 
         driver.quit();
     }
@@ -65,7 +65,7 @@ public class TC3 {
 
 
         // Check if the error message is visible
-        if(errorMessage.isDisplayed()) {
+        if (errorMessage.isDisplayed()) {
             // If text is visible, print "Registration Failed"
             System.out.println("Registration Failed");
         } else {

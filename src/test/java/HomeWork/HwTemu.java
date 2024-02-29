@@ -24,11 +24,10 @@ public class HwTemu {
 //            9.Turn off the driver.
 
 
-
-   static WebDriver driver;
+    static WebDriver driver;
 
     @BeforeClass
-    public static void sutp(){
+    public static void sutp() {
 
         driver = new ChromeDriver();
 
@@ -70,7 +69,7 @@ public class HwTemu {
     }
 
     @AfterClass
-    public static void exit(){
+    public static void exit() {
 
         driver.quit();
     }

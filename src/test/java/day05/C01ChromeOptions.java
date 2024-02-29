@@ -10,7 +10,6 @@ import org.openqa.selenium.chrome.ChromeOptions;
 public class C01ChromeOptions {
 
 
-
     /*
  ChromeOptions Class
 
@@ -29,37 +28,37 @@ disable-infobars: Prevents Chrome from displaying the "Chrome is being controlle
     @Test
     public void test() {
 
-    ChromeOptions options = new ChromeOptions();
+        ChromeOptions options = new ChromeOptions();
 
-    //start-maximized: Opens Chrome in maximize mode
-    options.addArguments("start-maximized");
+        //start-maximized: Opens Chrome in maximize mode
+        options.addArguments("start-maximized");
 
-    //incognito: Opens Chrome in incognito mode
-    options.addArguments("incognito");
+        //incognito: Opens Chrome in incognito mode
+        options.addArguments("incognito");
 
-    // headless: Runs Chrome in headless mode (without displaying).
-    options.addArguments("headless");
+        // headless: Runs Chrome in headless mode (without displaying).
+        options.addArguments("headless");
 
-    //disable-extensions: Disables existing extensions in the Chrome browser.
-    options.addArguments("disable-extensions");
+        //disable-extensions: Disables existing extensions in the Chrome browser.
+        options.addArguments("disable-extensions");
 
-    //disable-popup-blocking: Disables pop-up blocking in the Chrome browser
-    options.addArguments("disable-popup-blocking");
+        //disable-popup-blocking: Disables pop-up blocking in the Chrome browser
+        options.addArguments("disable-popup-blocking");
 
-    //disable-infobars: Prevents Chrome from displaying the "Chrome is being controlled by automated software" notification.
+        //disable-infobars: Prevents Chrome from displaying the "Chrome is being controlled by automated software" notification.
         options.addArguments("disable-infobars");
 
         options.addArguments("--lang=en");
 
 
-
         driver = new ChromeDriver(options);
         driver.get("https://www.google.com");
     }
+
     @AfterClass
-    public static void tearDown(){
+    public static void tearDown() {
         driver.close();
-       driver.quit();
+        driver.quit();
     }
 }
 

@@ -22,9 +22,10 @@ public class TC4 {
 //    Get the result.
 //    Print the result
 
-   static WebDriver driver;
+    static WebDriver driver;
+
     @BeforeClass
-    public static void sutp(){
+    public static void sutp() {
 
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -34,7 +35,7 @@ public class TC4 {
     }
 
     @AfterClass
-    public static void Exit(){
+    public static void Exit() {
 
         driver.quit();
     }

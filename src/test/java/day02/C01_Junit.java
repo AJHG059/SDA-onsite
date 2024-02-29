@@ -25,7 +25,7 @@ public class C01_Junit {
 
     @Test
 
-   public void test1(){
+    public void test1() {
 
         WebDriver driver = new ChromeDriver();
 
@@ -36,7 +36,7 @@ public class C01_Junit {
 
     @Test
 
-    public void test2(){
+    public void test2() {
 
         WebDriver driver = new FirefoxDriver();
 
@@ -47,7 +47,7 @@ public class C01_Junit {
 
     @Test
 
-    public void test3(){
+    public void test3() {
 
         WebDriver driver = new EdgeDriver();
 
@@ -58,7 +58,7 @@ public class C01_Junit {
 
     @Test
 
-    public void test4(){
+    public void test4() {
 
         WebDriver driver = new ChromeDriver();
 

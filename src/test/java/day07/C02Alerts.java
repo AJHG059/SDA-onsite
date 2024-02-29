@@ -33,7 +33,7 @@ Alerts: There are two types of alerts on websites.
     static WebDriver driver;
 
     @BeforeClass
-    public static void setup(){
+    public static void setup() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
@@ -43,9 +43,9 @@ Alerts: There are two types of alerts on websites.
     @Test
     public void test() throws InterruptedException {
         //Delete customer ID: 123
-        driver.findElement(By.name("cusid")).sendKeys("123"+ Keys.ENTER);
+        driver.findElement(By.name("cusid")).sendKeys("123" + Keys.ENTER);
         //Print the alert text.
-        Alert alert =driver.switchTo().alert();
+        Alert alert = driver.switchTo().alert();
         String alertMessage = alert.getText();
         System.out.println("alertMessage = " + alertMessage);
 

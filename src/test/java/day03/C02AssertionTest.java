@@ -26,7 +26,7 @@ public class C02AssertionTest {
     static WebDriver driver;
 
     @BeforeClass
-    public static void setUp(){
+    public static void setUp() {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
@@ -35,14 +35,14 @@ public class C02AssertionTest {
     }
 
     @AfterClass
-    public static void tearDown(){
+    public static void tearDown() {
         driver.quit();
     }
 
 
     //1- Test if the URL contains google.
     @Test
-    public void uRLTest(){
+    public void uRLTest() {
         String expectedUrl = "https://www.google.com/";
         String actualUrl = driver.getCurrentUrl();
         //Assert.assertEquals(expectedUrl,actualUrl);
@@ -52,18 +52,18 @@ public class C02AssertionTest {
 
     //  2- Test if the title does not contain Facebook.
     @Test
-    public void titleTest(){
+    public void titleTest() {
 
-        String title =driver.getTitle();
+        String title = driver.getTitle();
         assertFalse(title.contains("Facebook"));
     }
 
 
     //3- Test that the Google logo appears on the page.
     @Test
-    public void logoTest(){
+    public void logoTest() {
 
-        WebElement logo =driver.findElement(By.className("lnXdpd"));
+        WebElement logo = driver.findElement(By.className("lnXdpd"));
         assertTrue(logo.isDisplayed());
     }
 }

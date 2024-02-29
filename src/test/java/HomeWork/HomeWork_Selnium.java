@@ -22,7 +22,7 @@ Verify  pagesource of FaceBook contains "Facebook" .
         driver.get(" https://www.facebook.com/");
         String expectedUrl = " https://www.facebook.com/";
         String actualUrl = driver.getCurrentUrl();
-        if (expectedUrl.equals(actualUrl)){
+        if (expectedUrl.equals(actualUrl)) {
             System.out.println("They are the same");
         } else {
             System.out.println("They are different");

@@ -46,7 +46,8 @@ public class C01Waits {
         try {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
-            System.out.println("message can be given or something else...");;
+            System.out.println("message can be given or something else...");
+            ;
         }
         driver.findElement(By.xpath("//a[.='Home']"));
 
@@ -91,7 +92,7 @@ public class C01Waits {
         // At this point, our code is in the process of loading the element,
         // it can be located but may not be clickable; in this case, ElementNotClickable error is thrown.
         // We provide the desired condition in the wait object's until method.
-        WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(5));
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
         wait.until(ExpectedConditions.visibilityOf(button));
         button.click();
         // only time is defined, not active yet

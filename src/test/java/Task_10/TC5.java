@@ -31,8 +31,8 @@ public class TC5 {
         driver.manage().window().maximize();
 
         // Print the position and size of the page.
-        System.out.println("Position="+driver.manage().window().getPosition());
-        System.out.println("Size= "+driver.manage().window().getSize());
+        System.out.println("Position=" + driver.manage().window().getPosition());
+        System.out.println("Size= " + driver.manage().window().getSize());
 
         // Minimize the page.
         driver.manage().window().minimize();
@@ -41,8 +41,8 @@ public class TC5 {
         Thread.sleep(7000);
 
         // Print the position and dimensions of the page in maximized state.
-        System.out.println("Size= "+driver.manage().window().getSize());
-        System.out.println("Position= "+driver.manage().window().getPosition());
+        System.out.println("Size= " + driver.manage().window().getSize());
+        System.out.println("Position= " + driver.manage().window().getPosition());
 
 
         // Make the page fullscreen.

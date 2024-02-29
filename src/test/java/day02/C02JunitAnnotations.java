@@ -28,29 +28,31 @@ public class C02JunitAnnotations {
 
     WebDriver driver; // we nede to use this her out side to usedit every time
 
-        @Before
-    public void beforeEachTest(){
+    @Before
+    public void beforeEachTest() {
 
-             driver = new ChromeDriver();
+        driver = new ChromeDriver();
 
-            System.out.println("Before Annotation is executed ... ");
+        System.out.println("Before Annotation is executed ... ");
 
-        }
+    }
+
     @After
-    public void afterEveryTest(){
+    public void afterEveryTest() {
 
-            driver.quit();
+        driver.quit();
         System.out.println("After annotation is executes... ");
     }
 
     @Test
-    public void test1(){
+    public void test1() {
 
-            driver.get("https://www.clarusway.com");
+        driver.get("https://www.clarusway.com");
         System.out.println("Test 1 is executes... ");
     }
+
     @Test
-    public void test2(){
+    public void test2() {
 
         driver.get("https://www.google.com");
         System.out.println("Test 2 is executes... ");

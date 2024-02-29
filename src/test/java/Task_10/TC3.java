@@ -36,15 +36,14 @@ public class TC3 {
 
         Thread.sleep(5000);
 
-        if (titlePage.contains(expectedTitle)){
+        if (titlePage.contains(expectedTitle)) {
 
             System.out.println("passd test");
-        }
-        else {
+        } else {
             System.out.println("faild test");
         }
 
-       String PageSource = driver.getPageSource();
+        String PageSource = driver.getPageSource();
 
         driver.close();
         driver.quit();

@@ -28,19 +28,22 @@ public class C04DropdownExercise {
      */
 
     static WebDriver driver;
+
     @BeforeClass
-    public static void setUp(){
+    public static void setUp() {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         driver.get("https://demoqa.com/select-menu");
     }
+
     @AfterClass
-    public static void tearDown (){
+    public static void tearDown() {
         //driver.quit();
     }
+
     @Test
-    public void test(){
+    public void test() {
         //Select the Standard Multi-Select using the element id.
         WebElement element = driver.findElement(By.id("cars"));
         Select select = new Select(element);
@@ -55,7 +58,7 @@ public class C04DropdownExercise {
 
         //Select 'Saab' using value and deselect the same using value.
         select.selectByValue("saab");
-        assertEquals(2,select.getAllSelectedOptions().size());
+        assertEquals(2, select.getAllSelectedOptions().size());
 
         //use to delet by value only
         select.deselectByValue("saab");

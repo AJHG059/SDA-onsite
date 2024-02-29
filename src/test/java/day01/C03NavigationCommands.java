@@ -21,15 +21,15 @@ public class C03NavigationCommands {
 
         // back() opens the previous page
 
-        System.out.println("driver.getCurrentUrl() = "  + driver.getCurrentUrl());
+        System.out.println("driver.getCurrentUrl() = " + driver.getCurrentUrl());
 
         driver.navigate().back();
-        System.out.println( "driver.getTitle() = " + driver.getTitle());
+        System.out.println("driver.getTitle() = " + driver.getTitle());
 
         // forward() opens the next page after going back
 
         driver.navigate().forward();
-        System.out.println( "driver.getCurrentUrl()  =" + driver.getCurrentUrl());
+        System.out.println("driver.getCurrentUrl()  =" + driver.getCurrentUrl());
 
         // refresh() refreshes the page
 

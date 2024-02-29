@@ -21,12 +21,12 @@ Type "The Curious Case of Benjamin Button" in the search box and print the numbe
 Close with AfterClass.
  */
     static WebDriver driver;
-    By searchBox= By.name("q");
-    By results= By.id("result-stats");
+    By searchBox = By.name("q");
+    By results = By.id("result-stats");
 
 
     @BeforeClass
-    public static void setUp(){
+    public static void setUp() {
         driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -35,13 +35,13 @@ Close with AfterClass.
     }
 
     @AfterClass
-    public static void tearDown(){
+    public static void tearDown() {
 
         driver.quit();
     }
 
     @Test
-    public void greenMileTest(){
+    public void greenMileTest() {
 
         driver.findElement(searchBox).sendKeys("Green Mile" + Keys.ENTER);
         String totalResult = driver.findElement(results).getText();
@@ -60,8 +60,9 @@ Close with AfterClass.
         String totalResult = driver.findElement(results).getText();
         System.out.println("totalResult = " + totalResult);
     }
+
     @Test
-    public void benjaminTest(){
+    public void benjaminTest() {
 
         driver.get("http://www.google.com");
         driver.findElement(searchBox).sendKeys("The Curious Case of Benjamin Button" + Keys.ENTER);

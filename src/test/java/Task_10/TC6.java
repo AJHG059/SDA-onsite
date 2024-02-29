@@ -47,8 +47,7 @@ public class TC6 {
 
         if (titleOfThePage.contains("video")) {
             System.out.println("It contains the word 'video'");
-        }
-        else {
+        } else {
             System.out.println("It does not contain that one");
         }
 
@@ -57,7 +56,7 @@ public class TC6 {
         driver.manage().window().fullscreen();
 
         driver.quit();
-  }
+    }
 
 
 }

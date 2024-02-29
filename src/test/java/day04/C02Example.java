@@ -18,12 +18,12 @@ public class C02Example {
 //1. Method: createButtons(100)
 //2. Method: DeleteButtonsAndValidate()
 
-        WebDriver driver;
+    WebDriver driver;
 
     @Test
-    public void CreateDeletetest(){
+    public void CreateDeletetest() {
 
-         driver = new ChromeDriver();
+        driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         driver.get("http://the-internet.herokuapp.com/add_remove_elements/");
@@ -31,16 +31,16 @@ public class C02Example {
     }
 
     //1. Method: createButtons(100)
-    public void  createButtons(int numberOfbuttons){
+    public void createButtons(int numberOfbuttons) {
 
-       WebElement button = driver.findElement(By.xpath("//button[text()='Add Element']"));
-    for (int i = 0 ; i<numberOfbuttons; i++){
+        WebElement button = driver.findElement(By.xpath("//button[text()='Add Element']"));
+        for (int i = 0; i < numberOfbuttons; i++) {
 
-        button.click();
+            button.click();
         }
     }
 
-    }
+}
 
 
 

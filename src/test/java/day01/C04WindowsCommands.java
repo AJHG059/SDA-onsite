@@ -34,10 +34,10 @@ public class C04WindowsCommands {
 
         // Print the position and size of the page.
 
-       Point position1 = driver.manage().window().getPosition();
+        Point position1 = driver.manage().window().getPosition();
 
-      int xCoord = position1.getX();
-     int yCord = position1.getY();
+        int xCoord = position1.getX();
+        int yCord = position1.getY();
 
         System.out.println("position1.toString() = " + position1.toString());
         System.out.println("xCoord = " + xCoord);
@@ -62,10 +62,10 @@ public class C04WindowsCommands {
 
         // Print the position and dimensions of the page in maximized state.
 
-      Point position2 =  driver.manage().window().getPosition();
-      Dimension size2 =   driver.manage().window().getSize();
+        Point position2 = driver.manage().window().getPosition();
+        Dimension size2 = driver.manage().window().getSize();
 
-      System.out.println("position2.toString() = " + position2.toString());
+        System.out.println("position2.toString() = " + position2.toString());
         System.out.println("size2.toString() = " + size2.toString());
 
 

@@ -19,7 +19,8 @@ public class HW1 {
 //    Verify whether all 3 options given to the question can be selected.
 //    When each option is selected, print the following texts on the console.
 
-   static WebDriver driver;
+    static WebDriver driver;
+
     @Test
     public void HWTest() throws InterruptedException {
 

@@ -10,9 +10,8 @@ import org.openqa.selenium.support.locators.RelativeLocator;
 public class C01RelativeLocators {
 
 
-
     @Test
-    public void Test(){
+    public void Test() {
 
         WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -23,11 +22,6 @@ public class C01RelativeLocators {
         driver.findElement(emailfild).sendKeys("i did it : ");
 
     }
-
-
-
-
-
 
 
 }

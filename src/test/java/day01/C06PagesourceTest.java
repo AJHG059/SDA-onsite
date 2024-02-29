@@ -15,17 +15,17 @@ public class C06PagesourceTest {
         🡪 Verify that it writes "Performance Metrics" or " Gateway" from the Source code.
 
          */
-        String str1 ="Type the characters you see in this image";
-        String str2 ="Amazon";
+        String str1 = "Type the characters you see in this image";
+        String str2 = "Amazon";
 
         WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
         driver.get("https://www.amazon.com/");
-        String  sourceCode = driver.getPageSource();
+        String sourceCode = driver.getPageSource();
         System.out.println("sourceCode = " + sourceCode);
 
-        if (sourceCode.contains(str1) || sourceCode.contains(str2)){
+        if (sourceCode.contains(str1) || sourceCode.contains(str2)) {
             System.out.println("Test Passed...");
         } else {
             System.out.println("Test Failed...");

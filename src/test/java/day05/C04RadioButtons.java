@@ -18,7 +18,7 @@ public class C04RadioButtons {
      */
     @Test
     public void radButtonTest() throws InterruptedException {
-        WebDriver driver= new ChromeDriver();
+        WebDriver driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         //Go to URL:  https://www.facebook.com/
         driver.get("https://www.facebook.com/");
@@ -26,7 +26,7 @@ public class C04RadioButtons {
         //Click on Create an Account button.
         driver.findElement(By.xpath("//*[starts-with(@id,'u_0_0_')]")).click();
         //Then click on the radio buttons.
-        List<WebElement> radButtons=driver.findElements(By.xpath("//input[@type='radio']"));
+        List<WebElement> radButtons = driver.findElements(By.xpath("//input[@type='radio']"));
 
         radButtons.get(0).click();
         Assert.assertTrue(radButtons.get(0).isSelected());

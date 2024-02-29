@@ -7,18 +7,17 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class TC9 {
 
 
-                        // TC - 09
+    // TC - 09
 
     // Go to w3school homepage
-        // Do the following tasks by creating 3 different test methods.
-            //*- Print "STARTED" before all test() methods run
-                //*- Print "FINISHED" after all test() methods run.
-                    //*- Before all test() methods run, print "Test has started"
-                        //*- Print "method name + running" in all test methods
-                            //*- After all test() methods run, print "Test finished"
-                                // Test if the title contains "w3school" when the page window is minimize
-                                    // Test if the title does not contain "boss" when the page window is fullscreen
-
+    // Do the following tasks by creating 3 different test methods.
+    //*- Print "STARTED" before all test() methods run
+    //*- Print "FINISHED" after all test() methods run.
+    //*- Before all test() methods run, print "Test has started"
+    //*- Print "method name + running" in all test methods
+    //*- After all test() methods run, print "Test finished"
+    // Test if the title contains "w3school" when the page window is minimize
+    // Test if the title does not contain "boss" when the page window is fullscreen
 
 
     static WebDriver driver;
@@ -38,14 +37,14 @@ public class TC9 {
     }
 
     @Before
-    public void beforeClass () {
+    public void beforeClass() {
 
         System.out.println("STARTED");
         System.out.println("Test has started");
     }
 
     @After
-    public void afterClass () {
+    public void afterClass() {
 
         System.out.println("FINISHED");
         System.out.println("Test finished");

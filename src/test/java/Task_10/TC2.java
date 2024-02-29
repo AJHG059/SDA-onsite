@@ -7,13 +7,13 @@ public class TC2 {
 
     // TC - 02
 
-            // Go to www.yahoo.com
-            // Maximize Window
-            // Go to www.amazon.com
-            // Maximize Window
-            // Navigate Back
-            // Navigate Forward
-            // Refresh The Page
+    // Go to www.yahoo.com
+    // Maximize Window
+    // Go to www.amazon.com
+    // Maximize Window
+    // Navigate Back
+    // Navigate Forward
+    // Refresh The Page
 
     public static void main(String[] args) throws InterruptedException {
 
@@ -29,39 +29,37 @@ public class TC2 {
 
         Thread.sleep(3000);
 
-       String title1 =  driver.getTitle();
+        String title1 = driver.getTitle();
 
-       if (title1.contains("yahoo")){
-           System.out.println("Pass");
+        if (title1.contains("yahoo")) {
+            System.out.println("Pass");
 
-       }
-       else{
-           System.out.println("Fail");
-       }
+        } else {
+            System.out.println("Fail");
+        }
 
         // Go to www.amazon.com
         driver.get("https://www.Amazon.com");
 
-       Thread.sleep(2000);
+        Thread.sleep(2000);
 
-      String title2 = driver.getTitle();
+        String title2 = driver.getTitle();
 
-      if (title2.contains("Amazon")){
-          System.out.println("Pass");
-      }
-      else {
-          System.out.println("Fail");
-      }
+        if (title2.contains("Amazon")) {
+            System.out.println("Pass");
+        } else {
+            System.out.println("Fail");
+        }
         // Navigate Back
-      driver.navigate().back();
-      Thread.sleep(3000);
+        driver.navigate().back();
+        Thread.sleep(3000);
 
         // Navigate Forward
-      driver.navigate().forward();
-      Thread.sleep(3000);
+        driver.navigate().forward();
+        Thread.sleep(3000);
 
         // Refresh The Page
-      driver.navigate().refresh();
+        driver.navigate().refresh();
 
     }
 }

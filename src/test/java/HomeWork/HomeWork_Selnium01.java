@@ -12,20 +12,20 @@ public class HomeWork_Selnium01 {
         WebDriver driver = new ChromeDriver();
 
 
-            //Open google home page: https://www.google.com
-            driver.get("https://www.google.com");
+        //Open google home page: https://www.google.com
+        driver.get("https://www.google.com");
 
 
-                //Print Title on page
-            String Title = driver.getTitle();
-                System.out.println("the title is = " + Title);
+        //Print Title on page
+        String Title = driver.getTitle();
+        System.out.println("the title is = " + Title);
 
-            //Print Current URL on page
+        //Print Current URL on page
         String Url = driver.getCurrentUrl();
-            System.out.println("the Url is = " + Url);
+        System.out.println("the Url is = " + Url);
 
 
-            //Close/Quit the browser
+        //Close/Quit the browser
 
         driver.quit();
     }

@@ -21,10 +21,10 @@ public class C02Checkboxes {
 //    Then verify that checkbox 1 is checked
 
 
-     static WebDriver driver;
+    static WebDriver driver;
 
     @BeforeClass
-    public static void setup(){
+    public static void setup() {
 
         ChromeOptions options = new ChromeOptions();
         options.addArguments("start-,maximized");
@@ -35,35 +35,34 @@ public class C02Checkboxes {
     }
 
     @AfterClass
-    public static void Exit(){
+    public static void Exit() {
 
         driver.quit();
     }
 
     @Test
-    public void CheckBoxTest(){
+    public void CheckBoxTest() {
 
-    List<WebElement> CheckBoxes = driver.findElements(By.xpath("//*[@type='checkbox']"));
+        List<WebElement> CheckBoxes = driver.findElements(By.xpath("//*[@type='checkbox']"));
 
-    //        Assert.assertTrue(CheckBoxes.get(1).isSelected());
+        //        Assert.assertTrue(CheckBoxes.get(1).isSelected());
 
         //Then click on checkbox 1 if box is not selected
-    if (!CheckBoxes.get(0).isSelected()){
+        if (!CheckBoxes.get(0).isSelected()) {
 
-        CheckBoxes.get(0).click();
-        System.out.println("Chex Box 1 is selected");
-    }else {
+            CheckBoxes.get(0).click();
+            System.out.println("Chex Box 1 is selected");
+        } else {
 
-        System.out.println("Chex Box 1 is already selected ");
-    }
+            System.out.println("Chex Box 1 is already selected ");
+        }
 
-    //    Then click on checkbox 1 if box is not selected
-            if (!CheckBoxes.get(1).isSelected()){
+        //    Then click on checkbox 1 if box is not selected
+        if (!CheckBoxes.get(1).isSelected()) {
 
             CheckBoxes.get(1).click();
             System.out.println("Chex Box 2 is selected");
-        }
-            else {
+        } else {
 
             System.out.println("Chex Box 2 is already selected ");
         }

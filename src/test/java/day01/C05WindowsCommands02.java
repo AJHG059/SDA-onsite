@@ -13,7 +13,6 @@ public class C05WindowsCommands02 {
 //   🡪 Go to the Amazon URL : https://www.amazon.com/
 
 
-
 //   🡪 Print the position and size of the page.
 //   🡪 Adjust the position and size of the page as desired.
 //   🡪 Test that the page is in the position and size you want.
@@ -30,26 +29,25 @@ public class C05WindowsCommands02 {
         driver.get("https://www.amazon.com/");
 
 
-
         // 🡪 Print the position and size of the page.
 
         System.out.println(driver.manage().window().getPosition().toString());
         System.out.println(driver.manage().window().getSize().toString());
 
         // 🡪 Adjust the position and size of the page as desired.
-        Point newPosition = new Point(-1600,150); // We can prepare coordinate before
-        Dimension newSize = new Dimension(1500,800);
+        Point newPosition = new Point(-1600, 150); // We can prepare coordinate before
+        Dimension newSize = new Dimension(1500, 800);
 
         driver.manage().window().setSize(newSize);
         Thread.sleep(1000);
 
-        driver.manage().window().setSize(new Dimension(1000,500));
+        driver.manage().window().setSize(new Dimension(1000, 500));
         Thread.sleep(1000);
 
         driver.manage().window().setPosition(newPosition);
         Thread.sleep(1000);
 
-        driver.manage().window().setPosition(new Point(-800,300));// If we want we can write coordinate like this also
+        driver.manage().window().setPosition(new Point(-800, 300));// If we want we can write coordinate like this also
         // 🡪 Test that the page is in the position and size you want.
 
         // 🡪 Close the page.

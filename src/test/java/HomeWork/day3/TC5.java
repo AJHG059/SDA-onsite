@@ -15,15 +15,16 @@ public class TC5 {
 //    Locate the "Email or phone", "password", "Sign in" button using absolute xpath and relative xpath.
 
 
-       static WebDriver driver;
+    static WebDriver driver;
+
     @BeforeClass
-        public static void sutp(){
+    public static void sutp() {
 
         driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(12));
 
-}
+    }
 
     @Test
     public void testSignIn() {

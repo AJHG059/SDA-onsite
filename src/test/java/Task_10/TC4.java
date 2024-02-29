@@ -25,25 +25,24 @@ public class TC4 {
 
         System.out.println("Size = " + driver.manage().window().getSize());
 
-        driver.manage().window().setPosition(new Point(80,30));
+        driver.manage().window().setPosition(new Point(80, 30));
 
-        driver.manage().window().setSize(new Dimension(800,400));
+        driver.manage().window().setSize(new Dimension(800, 400));
 
-       int x = driver.manage().window().getPosition().getX();
-      int y = driver.manage().window().getPosition().getY();
+        int x = driver.manage().window().getPosition().getX();
+        int y = driver.manage().window().getPosition().getY();
 
 
-     int width = driver.manage().window().getSize().width;
-     int hight = driver.manage().window().getSize().height;
+        int width = driver.manage().window().getSize().width;
+        int hight = driver.manage().window().getSize().height;
 
-     if (x == 80 && y == 30 && width == 800 && hight == 400){
+        if (x == 80 && y == 30 && width == 800 && hight == 400) {
 
-         System.out.println("passed");
-     }
-     else {
-         System.out.println("Faild");
-     }
-     driver.quit();
+            System.out.println("passed");
+        } else {
+            System.out.println("Faild");
+        }
+        driver.quit();
 
     }
 

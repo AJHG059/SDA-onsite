@@ -11,47 +11,47 @@ import java.time.Duration;
 
 public class ch {
 
-   static WebDriver driver;
+    static WebDriver driver;
 
-   String exptudUrl= "http://automationexercise.com";
-   @BeforeClass
-   public static void befoor(){
+    String exptudUrl = "http://automationexercise.com";
 
-       driver = new ChromeDriver();
-       driver.get("https://www.google.com");
-       Assert.assertNotNull(driver);
-   }
+    @BeforeClass
+    public static void befoor() {
+
+        driver = new ChromeDriver();
+        driver.get("https://www.google.com");
+        Assert.assertNotNull(driver);
+    }
 
     @AfterClass
-    public static void exit(){
+    public static void exit() {
 
-       driver.quit();
+        driver.quit();
 
     }
 
 
     @Test
-   public void test(){
+    public void test() {
 
 
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+        driver.get("http://automationexercise.com");
+        String url = driver.getCurrentUrl();
+        Assert.assertEquals(exptudUrl, url);
 
-    driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-    driver.get("http://automationexercise.com");
-   String url = driver.getCurrentUrl();
-   Assert.assertEquals(exptudUrl,url);
-
-    driver.manage().window().maximize();
+        driver.manage().window().maximize();
 
 //        Assert.assertTrue(true);
 
-       WebElement button = driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a"));
-       button.click();
+        WebElement button = driver.findElement(By.xpath("//*[@id=\"header\"]/div/div/div/div[2]/div/ul/li[4]/a"));
+        button.click();
 
-       
+
         //input[@data-qa='login-email']
 
         By username = RelativeLocator.with(By.xpath("//input[@data-qa='login-email']"));
-       driver.findElement(username).sendKeys("sda@test.com");
+        driver.findElement(username).sendKeys("sda@test.com");
 
 
 //input[@data-qa='login-password']
@@ -62,7 +62,6 @@ public class ch {
 
         WebElement login = driver.findElement(By.xpath("//button[@data-qa='login-button']"));
         login.click();
-
 
 
     }

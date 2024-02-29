@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 import java.time.Duration;
+
 /*
 Go to URL: http://demo.automationtesting.in/Alerts.html
 Click "Alert with OK" and click 'click the button to display an alert box:'
@@ -22,6 +23,7 @@ Finally print on console this message "Hello Bootcamp How are you today" asserti
 public class C03AlertsExercise {
 
     static WebDriver driver;
+
     @BeforeClass
     public static void setup() {
         driver = new ChromeDriver();
@@ -29,6 +31,7 @@ public class C03AlertsExercise {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         driver.get("http://demo.automationtesting.in/Alerts.html");
     }
+
     @Test
     public void test() throws InterruptedException {
 

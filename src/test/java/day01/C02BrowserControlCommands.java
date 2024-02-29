@@ -24,18 +24,18 @@ public class C02BrowserControlCommands {
 
         //getTitle() returns the title of the current tab. It returns a String.
 
-          String title = driver.getTitle();
+        String title = driver.getTitle();
         System.out.println("title = " + title);
 
         //getCurrentURL() returns the URL of the current tab. It returns a String.
 
-       String url = driver.getCurrentUrl();
+        String url = driver.getCurrentUrl();
 
-        System.out.println("url = " +url);
+        System.out.println("url = " + url);
 
         // getPageSource() retrieves the source HTML code of the current page. It returns a String.
 
-       String pageSource = driver.getPageSource();
+        String pageSource = driver.getPageSource();
         System.out.println("pageSource = " + pageSource);
 
         // close() closes the current tab. If it's the only tab open, it also closes the browser.

@@ -28,7 +28,7 @@ public class hw1 {
     static WebDriver driver;
 
     @BeforeClass
-    public static void sutp(){
+    public static void sutp() {
 
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -38,12 +38,12 @@ public class hw1 {
     }
 
     @AfterClass
-    public static void Exit(){
+    public static void Exit() {
         //driver.quit();
     }
 
     @Test
-    public void Test1(){
+    public void Test1() {
 
         WebElement dropdownElement = driver.findElement(By.id("dropdown"));
         Select dropdown = new Select(dropdownElement);
@@ -76,7 +76,6 @@ public class hw1 {
         // 8- Find the size of the dropdown, Print "Expected Is Not Equal Actual" if there are not 3 elements in the dropdown
         System.out.println(dropdown.getOptions().size());
     }
-
 
 
 }

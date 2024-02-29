@@ -11,19 +11,19 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class TC10 {
 
 
-                        // TC - 10
+    // TC - 10
 
 // Go to Automation Exercises homepage
     // Find the locators of the relevant areas and click on them
-        // https://automationexercise.com/
-            // Task 01 --> " Home "
-                // Task 02 --> " Products "
-                    // Task 03 --> " Cart "
-                        // Task 04 --> " Signup / Login "
-                            // Task 05 --> " Test Cases "
-                                // Task 06 --> " API Testing "
-                                    // Task 07 --> " Video Tutorials "
-                                        // Task 08 --> " Contact us "
+    // https://automationexercise.com/
+    // Task 01 --> " Home "
+    // Task 02 --> " Products "
+    // Task 03 --> " Cart "
+    // Task 04 --> " Signup / Login "
+    // Task 05 --> " Test Cases "
+    // Task 06 --> " API Testing "
+    // Task 07 --> " Video Tutorials "
+    // Task 08 --> " Contact us "
 
     static WebDriver driver;
 
@@ -58,49 +58,49 @@ public class TC10 {
         driver.close();
     }
 
-        @Test
-        public void findProducts(){
-            WebElement productButton = driver.findElement
-                    (By.xpath("//i[@class='material-icons card_travel']"));
+    @Test
+    public void findProducts() {
+        WebElement productButton = driver.findElement
+                (By.xpath("//i[@class='material-icons card_travel']"));
 
-            productButton.click();
-            driver.close();
-        }
-
-        @Test
-        public void findCart () {
-            WebElement cartButton = driver.findElement(By.linkText("Cart"));
-            cartButton.click();
-
-            WebElement cartButton2 = driver.findElement
-                                        (By.xpath("(//i[@class='fa fa-shopping-cart'])[1]"));
-            cartButton2.click();
-            driver.close();
-        }
-
-
-        @Test
-        public void findSignLogin () {
-            WebElement signLoginButton = driver.findElement
-                    (By.linkText("Signup / Login"));
-
-            signLoginButton.click();
-
-            WebElement signButton = driver.findElement
-                    (By.xpath("//i[@class='fa fa-lock']"));
-
-            signButton.click();
+        productButton.click();
         driver.close();
-        }
+    }
 
-        @Test
-        public void findTestCases() {
-            WebElement testCasesButton = driver.findElement(By.linkText("Test Cases"));
-            testCasesButton.click();
+    @Test
+    public void findCart() {
+        WebElement cartButton = driver.findElement(By.linkText("Cart"));
+        cartButton.click();
 
-            WebElement testCaseButton2 = driver.findElement
-                                        (By.xpath("(//i[@class='fa fa-list'])[1]"));
-            testCaseButton2.click();
+        WebElement cartButton2 = driver.findElement
+                (By.xpath("(//i[@class='fa fa-shopping-cart'])[1]"));
+        cartButton2.click();
+        driver.close();
+    }
+
+
+    @Test
+    public void findSignLogin() {
+        WebElement signLoginButton = driver.findElement
+                (By.linkText("Signup / Login"));
+
+        signLoginButton.click();
+
+        WebElement signButton = driver.findElement
+                (By.xpath("//i[@class='fa fa-lock']"));
+
+        signButton.click();
+        driver.close();
+    }
+
+    @Test
+    public void findTestCases() {
+        WebElement testCasesButton = driver.findElement(By.linkText("Test Cases"));
+        testCasesButton.click();
+
+        WebElement testCaseButton2 = driver.findElement
+                (By.xpath("(//i[@class='fa fa-list'])[1]"));
+        testCaseButton2.click();
         driver.close();
     }
 
@@ -110,7 +110,7 @@ public class TC10 {
         apiTestingButton.click();
 
         WebElement apiTestingButton2 = driver.findElement
-                                        (By.xpath("(//i[@class=\"fa fa-list\"])[2]"));
+                (By.xpath("(//i[@class=\"fa fa-list\"])[2]"));
         apiTestingButton2.click();
         driver.close();
     }
@@ -119,11 +119,11 @@ public class TC10 {
     @Test
     public void findVideoTutorials() {
         WebElement videoTutorialsButton = driver.findElement
-                                            (By.linkText("Video Tutorials"));
+                (By.linkText("Video Tutorials"));
         videoTutorialsButton.click();
 
         WebElement videoTutorialsButton2 = driver.findElement
-                                            (By.xpath("//i[@class=\"fa fa-youtube-play\"]"));
+                (By.xpath("//i[@class=\"fa fa-youtube-play\"]"));
         videoTutorialsButton2.click();
         driver.close();
     }
@@ -134,7 +134,7 @@ public class TC10 {
         contactUsButton.click();
 
         WebElement contactUsButton2 = driver.findElement
-                                        (By.xpath("//i[@class=\"fa fa-envelope\"]"));
+                (By.xpath("//i[@class=\"fa fa-envelope\"]"));
         contactUsButton2.click();
         driver.close();
     }

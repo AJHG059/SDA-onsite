@@ -21,8 +21,9 @@ public class HW2 {
 //    Close the browser.
 
     static WebDriver driver;
+
     @BeforeClass
-    public static void sutp(){
+    public static void sutp() {
 
         driver = new ChromeDriver();
         driver.manage().window().maximize();
@@ -33,14 +34,14 @@ public class HW2 {
 
 
     @AfterClass
-    public static void exit(){
+    public static void exit() {
 
         //driver.quit();
     }
 
 
     @Test
-    public void test(){
+    public void test() {
 
         //Select the Old Style Select Menu using the element id.
 
@@ -52,12 +53,6 @@ public class HW2 {
 
 
     }
-
-
-
-
-
-
 
 
 }

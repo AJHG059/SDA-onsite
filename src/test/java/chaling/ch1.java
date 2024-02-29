@@ -9,6 +9,7 @@ import org.openqa.selenium.By; // Imports Selenium's By class for locating eleme
 import org.openqa.selenium.WebDriver; // Imports the WebDriver interface for controlling the browser.
 import org.openqa.selenium.WebElement; // Imports the WebElement interface for interacting with elements.
 import org.openqa.selenium.chrome.ChromeDriver; // Imports the ChromeDriver class, a WebDriver implementation.
+
 import java.time.Duration; // Imports the Duration class for specifying time durations.
 import java.util.Locale; // Imports the Locale class, although it's not used in this script.
 
@@ -16,7 +17,7 @@ public class ch1 { // Declares a public class named 'ch1'.
     static WebDriver driver; // Declares a static WebDriver variable to share it across methods.
 
     @BeforeClass // Marks the setup method to run once before all test methods in the class.
-    public static void setUp(){
+    public static void setUp() {
         driver = new ChromeDriver(); // Instantiates the ChromeDriver, opening a Chrome browser.
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10)); // Sets a default wait time for element searches.
         driver.manage().window().maximize(); // Maximizes the browser window.
@@ -24,12 +25,12 @@ public class ch1 { // Declares a public class named 'ch1'.
     }
 
     @AfterClass // Marks the teardown method to run once after all test methods in the class.
-    public static void tearDown (){
+    public static void tearDown() {
         //driver.quit(); // Would close the browser window and end the WebDriver session.
     }
 
     @Test // Marks the following method as a test case.
-    public void challenge(){
+    public void challenge() {
         // Interacting with the email field.
         WebElement email = driver.findElement(By.id("email")); // Finds the email input element by its ID.
         email.click(); // Clicks on the email input field to focus on it.

@@ -13,8 +13,9 @@ import java.time.Duration;
 
 public class C03Dropdown2 {
     static WebDriver driver;
+
     @BeforeClass
-    public static void setUp(){
+    public static void setUp() {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
@@ -22,12 +23,12 @@ public class C03Dropdown2 {
     }
 
     @AfterClass
-    public static void tearDown(){
+    public static void tearDown() {
         //  driver.quit();
     }
 
     @Test
-    public void dropdownTest(){
+    public void dropdownTest() {
         // locate WebElement with select tag
         WebElement element = driver.findElement(By.id("oldSelectMenu"));
 
