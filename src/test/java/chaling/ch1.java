@@ -48,8 +48,10 @@ public class ch1 { // Declares a public class named 'ch1'.
         addContact.click(); // Clicks the 'Add Contact' button.
 
         // Filling in the contact form with Faker-generated and hard-coded data.
+
         Faker faker = new Faker(); // Instantiates a Faker object to generate fake data.
         WebElement fname = driver.findElement(By.id("firstName")); // Finds the first name input field.
+
         String firstname = faker.name().firstName(); // Generates a fake first name.
         fname.sendKeys(firstname); // Enters the fake first name into the field.
 
