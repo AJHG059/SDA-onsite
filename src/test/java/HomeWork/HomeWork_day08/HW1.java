@@ -1,4 +1,4 @@
-package HomeWork_day08;
+package HomeWork.HomeWork_day08;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
@@ -25,8 +25,6 @@ public class HW1 extends TestBase {
         //  Exit the iframe and return to the main page.
         driver.switchTo().window(handle);
         driver.switchTo().defaultContent();
-
-
 
 
     }
