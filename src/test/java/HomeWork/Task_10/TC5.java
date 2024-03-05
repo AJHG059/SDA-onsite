@@ -1,4 +1,4 @@
-package Task_10;
+package HomeWork.Task_10;
 
 import org.checkerframework.checker.units.qual.C;
 import org.openqa.selenium.WebDriver;

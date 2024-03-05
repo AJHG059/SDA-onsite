@@ -1,4 +1,4 @@
-package HWday09;
+package HomeWork.HWday09;
 
 import org.junit.Test;
 import org.openqa.selenium.By;

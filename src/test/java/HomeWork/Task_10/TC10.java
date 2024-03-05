@@ -1,4 +1,4 @@
-package Task_10;
+package HomeWork.Task_10;
 
 import org.junit.After;
 import org.junit.Before;
