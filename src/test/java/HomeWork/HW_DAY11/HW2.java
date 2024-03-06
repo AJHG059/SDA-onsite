@@ -21,9 +21,12 @@ public class HW2 extends TestBase {
     public void test() {
 
         ////////////1)
+        //Create a File on Desktop
+        //Verify that the file exists
         String desktopPath = System.getProperty("user.home") + "/Desktop";
         File file = new File(desktopPath, "abdulaziz");
         System.out.println(file);
+        Assert.assertTrue(file.exists());
 
 //-----------------------------------------------------------------------------------------
         ///(2)
