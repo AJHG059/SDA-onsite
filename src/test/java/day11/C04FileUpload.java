@@ -28,7 +28,7 @@ public class C04FileUpload extends TestBase {
         driver.get("https://the-internet.herokuapp.com/upload");
 
         //    Find the path of the file that you want to upload.
-        //we defin the web element in the line 15
+        //we defin the web element in the line 18
 
         WebElement selectFile = driver.findElement(choseFile);
         //selectFile.click();
