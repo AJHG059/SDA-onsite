@@ -21,8 +21,9 @@ import java.time.Duration;
 public abstract class TestBase {
     protected static WebDriver driver;
     protected static Actions actions;
+
     @BeforeClass
-    public static  void setUp(){
+    public static void setUp() {
         driver = new ChromeDriver();
 
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -32,7 +33,7 @@ public abstract class TestBase {
     }
 
     @AfterClass
-    public static void teardowm(){
+    public static void teardowm() {
         // driver.quit();
     }
 }

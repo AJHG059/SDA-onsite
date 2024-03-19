@@ -64,6 +64,7 @@ public class C01Waits {
         driver.get("https://seleniumatfingertips.wordpress.com/");
 
     }
+
     @Test
     public void implicitWait() {
     /* Implicit wait:

@@ -8,19 +8,19 @@ public class day13 {
 
     }
 
-   //1. write a java program that revers String
+    //1. write a java program that revers String
     public static String reverseString(String input) {
 
-    String result = "";
-    for (int i = input.length()-1; i>=0;i--){
+        String result = "";
+        for (int i = input.length() - 1; i >= 0; i--) {
 
-        result += input.charAt(i);
-    }
-    return result;
+            result += input.charAt(i);
+        }
+        return result;
     }
 
     //2. write a java program to swab two number
-    public static void  swabNumber(int a, int b){
+    public static void swabNumber(int a, int b) {
         System.out.println("Before swab :");
         System.out.println("a: " + a + " ");
         System.out.println("b: " + b + " ");
@@ -30,7 +30,7 @@ public class day13 {
         b = temp;
 
         System.out.println("a: " + a + " ");
-        System.out.println("b: " + b );
+        System.out.println("b: " + b);
     }
 
 

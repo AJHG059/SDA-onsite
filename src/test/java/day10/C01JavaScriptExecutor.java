@@ -55,7 +55,7 @@ public class C01JavaScriptExecutor extends TestBase {
         js.executeScript("arguments[0].scrollIntoView();", button);
 
         //this code from JScriptUtilities (driver,element)
-        JScriptUtilities.clickElementByJS(driver,button);
+        JScriptUtilities.clickElementByJS(driver, button);
 
     }
 }

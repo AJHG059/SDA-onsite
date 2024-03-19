@@ -59,7 +59,6 @@ public class C03ApachePoiWriteExcel {
     public void test02() throws IOException {
 
 
-
         //Store the path of the file as string and open the file.
         String separator = System.getProperty("file.separator");
         String path = System.getProperty("user.dir") + separator + "resources" + separator + "excelfile.xlsx";

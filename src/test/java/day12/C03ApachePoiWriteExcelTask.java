@@ -38,15 +38,15 @@ public class C03ApachePoiWriteExcelTask {
 
         //Get all rows in the sheet.
         int rowsUsed = 0;
-        while(true){
-            if ( sheet1.getRow(rowsUsed).getCell(0) == null ){
+        while (true) {
+            if (sheet1.getRow(rowsUsed).getCell(0) == null) {
                 rowsUsed--;
                 break;
             }
             rowsUsed++;
         }
         List<Row> rowsList = new ArrayList<>();
-        for (int i = 0; i <= rowsUsed; i++){
+        for (int i = 0; i <= rowsUsed; i++) {
             rowsList.add(sheet1.getRow(i));
         }
         System.out.println(rowsList.size());
@@ -79,13 +79,13 @@ public class C03ApachePoiWriteExcelTask {
         Sheet sheet1 = wb.getSheetAt(0);
 
         int rowsUsed = 0;
-        while(true){
-            if ( sheet1.getRow(rowsUsed).getCell(0) == null ){
+        while (true) {
+            if (sheet1.getRow(rowsUsed).getCell(0) == null) {
                 break;
             }
             rowsUsed++;
         }
-        for (int i = 1; i < rowsUsed; i++){
+        for (int i = 1; i < rowsUsed; i++) {
             sheet1.getRow(i).createCell(2).setCellValue(i + "" + i + "" + i + "" + i);
         }
 

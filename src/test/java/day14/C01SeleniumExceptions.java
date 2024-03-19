@@ -11,7 +11,7 @@ import utilities.TestBaseReport;
 public class C01SeleniumExceptions extends TestBaseReport {
 
     @Test
-    public void test01(){
+    public void test01() {
         extentTest.log(Status.INFO, "this is the details for test01");
         driver.get("https://www.google.com");
 
@@ -29,7 +29,7 @@ public class C01SeleniumExceptions extends TestBaseReport {
 
 
     @Test
-    public void elementClickInterceptExceptionTest(){
+    public void elementClickInterceptExceptionTest() {
         extentTest.log(Status.INFO, "this is the details for test02");
         driver.get("https://demoqa.com/radio-button");
         driver.findElement(By.id("yesRadio"));
@@ -37,12 +37,12 @@ public class C01SeleniumExceptions extends TestBaseReport {
     }
 
     @Test
-    public void nullPointerTest(){
+    public void nullPointerTest() {
         extentTest.log(Status.INFO, "this is the details for test03");
         String newString = "null";
         System.out.println(newString.length());
 
-        Assert.assertTrue(newString.length()>0);
+        Assert.assertTrue(newString.length() > 0);
 
     }
 }

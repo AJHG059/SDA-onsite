@@ -39,7 +39,7 @@ public class C01ApachePoiReadExcel {
     public void readExcel() throws IOException {
         // The path of the Excel file to be read
         String separator = System.getProperty("file.separator");
-        String path = System.getProperty("user.dir")+separator+"resources"+separator+"excelfile.xlsx";
+        String path = System.getProperty("user.dir") + separator + "resources" + separator + "excelfile.xlsx";
 
         // C:\...\...\IdeaProjects\CWJUnitProject\resources\excelfile.xlsx
         // Open the workbook using file input stream.
@@ -50,7 +50,7 @@ public class C01ApachePoiReadExcel {
         Sheet sheet1 = wb.getSheet("Sheet1");
 
         // Go to the first row.
-        Row row1 =sheet1.getRow(0);
+        Row row1 = sheet1.getRow(0);
 
         // Go to the first cell on that first row and print.
         Cell cell11 = row1.getCell(0);
@@ -64,7 +64,7 @@ public class C01ApachePoiReadExcel {
         // Go to the 2nd row first cell and assert if the data equals Russia.
         Row row2 = sheet1.getRow(1);
         Cell cell21 = row2.getCell(0);
-        System.out.println("cell21 = "+ cell21.toString());
+        System.out.println("cell21 = " + cell21.toString());
         Assert.assertEquals("Russia", cell21.toString());
 
         // Go to the 3rd row and print the 2nd cell.
@@ -79,8 +79,8 @@ public class C01ApachePoiReadExcel {
         System.out.println(sheet1.getLastRowNum());
         int rowsUsed = 0;
         // TODO
-        while(true){
-            if ( sheet1.getRow(rowsUsed).getCell(0) == null ){
+        while (true) {
+            if (sheet1.getRow(rowsUsed).getCell(0) == null) {
                 break;
             }
             rowsUsed++;
@@ -96,10 +96,10 @@ public class C01ApachePoiReadExcel {
         // Let's print country-area information in key-value format like a map.
         // This can be done if there are 2 columns in the Excel.
         Map<String, String> countryArea = new HashMap<>();
-        for (int i = 0; i < rowsUsed; i++){
+        for (int i = 0; i < rowsUsed; i++) {
             String country = sheet1.getRow(i).getCell(0).toString();
             String area = sheet1.getRow(i).getCell(1).toString();
-            countryArea.put(country,area);
+            countryArea.put(country, area);
         }
 
         System.out.println(countryArea);

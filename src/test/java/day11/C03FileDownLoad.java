@@ -32,8 +32,8 @@ public class C03FileDownLoad extends TestBase {
         String separater = System.getProperty("file.separator");
 
         String pathOfFile = System.getProperty("user.home")
-                                                + separater + "Downloads"
-                                                + separater + "selenium-snapshot.png";
+                + separater + "Downloads"
+                + separater + "selenium-snapshot.png";
 
         boolean isExist = Files.exists(Paths.get(pathOfFile));
         Assert.assertTrue(isExist);

@@ -23,13 +23,13 @@ public class C01IFrames01 {
     }
 
     @Test
-    public void test()  {
+    public void test() {
 
         //Go to URL: https://the-internet.herokuapp.com/iframe
         driver.get("https://the-internet.herokuapp.com/iframe");
 
         //Verify the Bolded text contains "Editor"
-        WebElement boldText =driver.findElement(By.tagName("h3"));
+        WebElement boldText = driver.findElement(By.tagName("h3"));
         Assert.assertTrue(boldText.getText().contains("Editor"));
 
         //  xpath : //h3[.='An iFrame containing the TinyMCE WYSIWYG Editor']  , //h3  ,  tagName : h3
@@ -53,7 +53,7 @@ public class C01IFrames01 {
 
         // Delete the text in the text box
         // driver.findElement(By.xpath("//*[@id='tinymce']/p")).clear();
-        textBox.sendKeys(Keys.chord(Keys.COMMAND,"a"),Keys.BACK_SPACE);
+        textBox.sendKeys(Keys.chord(Keys.COMMAND, "a"), Keys.BACK_SPACE);
 
         // Type "Hi everyone"
         // WebElement textBox1 = driver.findElement(By.xpath("//*[@id='tinymce']"));

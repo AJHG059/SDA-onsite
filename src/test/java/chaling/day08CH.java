@@ -137,7 +137,7 @@ public class day08CH {
     @Test
     public void Rating() {
 
-        WebElement rating= driver.findElement(By.xpath("//*[@aria-label='3 Star']"));
+        WebElement rating = driver.findElement(By.xpath("//*[@aria-label='3 Star']"));
         rating.click();
 
     }

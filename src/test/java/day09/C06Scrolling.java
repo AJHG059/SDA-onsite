@@ -8,15 +8,14 @@ import utilities.TestBase;
 public class C06Scrolling extends TestBase {
 
 
+    //Go to URL: https://www.amazon.com/
+    //By using PAGE_UP, PAGE_DOWN, ARROW_UP, ARROW_DOWN
+    //use actions scroll the page
+    //scroll down
+    //scroll up.
 
-        //Go to URL: https://www.amazon.com/
-        //By using PAGE_UP, PAGE_DOWN, ARROW_UP, ARROW_DOWN
-        //use actions scroll the page
-        //scroll down
-        //scroll up.
-
-        @Test
-        public void scrollPageUpDown() throws InterruptedException {
+    @Test
+    public void scrollPageUpDown() throws InterruptedException {
         Actions actions = new Actions(driver);
         driver.get("https://www.linkedin.com/");
 
@@ -30,8 +29,8 @@ public class C06Scrolling extends TestBase {
         actions.sendKeys(Keys.PAGE_UP).perform();
     }
 
-        @Test
-        public void scrollArrowUpDown() throws InterruptedException {
+    @Test
+    public void scrollArrowUpDown() throws InterruptedException {
         Actions actions = new Actions(driver);
         driver.get("https://demoqa.com/auto-complete");
 

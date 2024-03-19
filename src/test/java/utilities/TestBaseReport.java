@@ -18,7 +18,6 @@ import java.util.Date;
 public abstract class TestBaseReport {
 
 
-
     protected WebDriver driver;
     protected Actions actions;
 
@@ -29,11 +28,11 @@ public abstract class TestBaseReport {
     protected static ExtentTest extentTest;
 
     @BeforeClass
-    public static void setupClass(){
+    public static void setupClass() {
         extentReports = new ExtentReports();
 
         String currentDate = new SimpleDateFormat("yyyy_MM_dd_hh_mm_ss").format(new Date());
-        String filePath = System.getProperty("user.dir") + "/test-output/reports/testReport_"+currentDate+".html";
+        String filePath = System.getProperty("user.dir") + "/test-output/reports/testReport_" + currentDate + ".html";
 
         extentSparkReporter = new ExtentSparkReporter(filePath);
 
@@ -42,7 +41,7 @@ public abstract class TestBaseReport {
     }
 
     @Before
-    public void setup(){
+    public void setup() {
         driver = new ChromeDriver();
         //driver = new FirefoxDriver();
         driver.manage().window().maximize();
@@ -53,14 +52,15 @@ public abstract class TestBaseReport {
 
 
     }
+
     @After
-    public void tearDown(){
+    public void tearDown() {
         driver.quit();
         extentReports.flush();
     }
 
     @AfterClass
-    public static void tearDown2(){
+    public static void tearDown2() {
         //extentReports.flush();
     }
 }

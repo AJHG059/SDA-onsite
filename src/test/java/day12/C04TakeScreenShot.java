@@ -28,10 +28,10 @@ public class C04TakeScreenShot extends TestBase {
 
         String date = new SimpleDateFormat("yyyy_MM_dd_hh_m_ss").format(new Date());
         String separator = System.getProperty("file.separator");
-        File destination = new File(System.getProperty("user.dir") + separator + "test-output" + separator + "screenshots" +separator+ "Linkedin"+date+".png");
+        File destination = new File(System.getProperty("user.dir") + separator + "test-output" + separator + "screenshots" + separator + "Linkedin" + date + ".png");
 
 
-        FileUtils.copyFile(source,destination);
+        FileUtils.copyFile(source, destination);
     }
 
     @Test
@@ -43,9 +43,9 @@ public class C04TakeScreenShot extends TestBase {
         String date = new SimpleDateFormat("yyyy-MM-dd-hh-mm-ss").format(new Date());
         String separator = System.getProperty("file.separator");
 
-        File destination = new File(System.getProperty("user.dir") + separator+ "test-output" +separator+ "screenshots" + separator+ "Linkedin" +date+".png");
+        File destination = new File(System.getProperty("user.dir") + separator + "test-output" + separator + "screenshots" + separator + "Linkedin" + date + ".png");
 
-        FileUtils.copyFile(source,destination);
+        FileUtils.copyFile(source, destination);
 
     }
 }

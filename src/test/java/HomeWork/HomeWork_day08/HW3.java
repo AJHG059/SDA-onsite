@@ -16,7 +16,7 @@ public class HW3 extends TestBase {
 //    Print the heading of the parent window in the console.
 
     @Test
-    public void test(){
+    public void test() {
 
         By tabElement = By.id("tabButton");
         By windElement = By.id("windowButton");
