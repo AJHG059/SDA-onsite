@@ -48,7 +48,7 @@ public class C01Waits {
             Thread.sleep(3000);
         } catch (InterruptedException e) {
             System.out.println("message can be given or something else...");
-            ;
+
         }
         driver.findElement(By.xpath("//a[.='Home']"));
 
