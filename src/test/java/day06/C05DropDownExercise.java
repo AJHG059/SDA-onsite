@@ -66,14 +66,14 @@ public class C05DropDownExercise {
         Assert.assertTrue(colorslist.contains("Black"));
 //--------------------------------------------------
 //anther way to Verify the dropdown has option "Black"
-//        boolean isBlackOptionPresent = false;
-//        for (WebElement option : options) {
-//            if ("Black".equals(option.getText())) {
-//                isBlackOptionPresent = true;
-//                break;
-//            }
-//        }
-//        Assert.assertTrue("Dropdown does not have 'Black' option", isBlackOptionPresent);
+        boolean isBlackOptionPresent = false;
+        for (WebElement option : options) {
+            if ("Black".equals(option.getText())) {
+                isBlackOptionPresent = true;
+                break;
+            }
+        }
+        Assert.assertTrue("Dropdown does not have 'Black' option", isBlackOptionPresent);
 
 //----------------------------------------------------------------
 
